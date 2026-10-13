@@ -1,0 +1,35 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"   # Monday: which pages are behind their source
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/check_provenance.py
+  stale:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/stale_pages.py > stale.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Open or update the issue "pages behind their source"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="pages behind their source"
+          number=$(gh issue list --state open --search "$title in:title" --json number,title -q ".[] | select(.title==\"$title\") | .number" | head -1)
+          if grep -q '^- ' stale.md; then
+            if [ -n "$number" ]; then gh issue edit "$number" --body-file stale.md; else gh issue create --title "$title" --body-file stale.md; fi
+          elif [ -n "$number" ]; then gh issue close "$number" --comment "Every page cites the current source."
+          fi
