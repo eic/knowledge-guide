@@ -30,7 +30,7 @@ belonging to the single digitization factory).
 `PFRICH` / `PFRICHHits`; the plugin directory and flag prefix are `PFRICH`;
 every output collection is named `RICHEndcapN…`; and the geometry constant is
 `BackwardRICH_ID`. See
-[Detector naming & aliases]({% link docs/eicrecon/naming.md %}).
+[Detector naming & aliases]({{ site.baseurl }}{% link docs/eicrecon/naming.md %}).
 
 ## Chain overview
 
@@ -46,7 +46,7 @@ That is the whole plugin
 — groups photon hits inside a time gate, applies quantum efficiency and a
 safety factor, converts photoelectrons to ADC counts with a pedestal, and
 quantises time. Described on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 | parameter | struct default | pfRICH value | meaning |
 |---|---|---|---|
@@ -68,7 +68,7 @@ quantises time. Described on the
 
 The configuration is **identical to the dRICH's** apart from `detectorName`
 and `readoutClass` — see
-[DRICH]({% link docs/eicrecon/detectors/drich.md %}).
+[DRICH]({{ site.baseurl }}{% link docs/eicrecon/detectors/drich.md %}).
 
 ## Where pfRICH PID actually comes from
 
@@ -82,7 +82,7 @@ the `RICHEndcapNLUTPID` instance of `PIDLookup`, reading
 That table is a parametrisation of standalone studies. **Nothing in EICrecon
 derives it from `PFRICHHits`.** If you need pfRICH pattern recognition, it
 lives outside this repository. Full detail on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 ## What is persisted, and who consumes it
 
@@ -98,7 +98,7 @@ output list.
 
 1. **Digitization is a dead end.** `RICHEndcapNRawHits` is produced,
    persisted, and never read. Same situation as
-   [hpDIRC]({% link docs/eicrecon/detectors/dirc.md %}).
+   [hpDIRC]({{ site.baseurl }}{% link docs/eicrecon/detectors/dirc.md %}).
 2. The digitization constants are copied from the dRICH (`speMean = 80`,
    `pedMean = 200`, `safetyFactor = 0.7`, …) even though the sensors and
    optics differ. No pfRICH-specific tuning is visible in the source.

@@ -49,7 +49,7 @@ The runtime flag prefix is `LUMISPECCAL:` (88 flags in the
 ## Stage 1 — Digitization
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 `readoutType` is left at the default `"simple"` (linear ADC conversion).
 
 | parameter | struct default | LUMISPECCAL value | meaning |
@@ -84,7 +84,7 @@ The runtime flag prefix is `LUMISPECCAL:` (88 flags in the
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — one proto-cluster per contributing MC primary, hits
 shared rather than partitioned. Described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 ## Stage 4 — Island proto-clustering
 

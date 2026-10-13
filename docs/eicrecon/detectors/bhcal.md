@@ -59,7 +59,7 @@ hits are produced but not consumed inside the plugin.
 ## Stage 1 — Digitization
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 `readoutType` stays at the default `"simple"` (linear ADC conversion).
 
 | parameter | BHCAL value | meaning |
@@ -99,7 +99,7 @@ empty string *explicitly* rather than leaving them at the default.
 **Algorithm:** [`CalorimeterHitsMerger`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitsMerger.cc)
 — *"An algorithm to group readout hits from a calorimeter. Energy is summed"*.
 Mechanics are described on the
-[EHCAL page]({% link docs/eicrecon/detectors/ehcal.md %}):
+[EHCAL page]({{ site.baseurl }}{% link docs/eicrecon/detectors/ehcal.md %}):
 each `<field>:<expression>` entry replaces that cellID field with the value of
 the expression; hits with identical rebuilt cellIDs are summed.
 
@@ -119,7 +119,7 @@ The plugin's own comment states the intent verbatim
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — one proto-cluster per contributing MC primary, hits
 shared rather than partitioned. Described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 Input is `HcalBarrelRecHits` (not the merged hits).
 
 ## Stage 5 — Island proto-clustering
@@ -174,7 +174,7 @@ already applied at `CalorimeterHitReco`.
 
 **Algorithm:** [`TrackClusterMergeSplitter`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/TrackClusterMergeSplitter.cc)
 — procedure described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 | parameter | struct default | BHCAL value | meaning |
 |---|---|---|---|

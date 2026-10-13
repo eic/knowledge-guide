@@ -38,7 +38,7 @@ That is the entire plugin
 
 **Algorithm:** [`PhotoMultiplierHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/digi/PhotoMultiplierHitDigi.cc)
 — described on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 | parameter | struct default | DIRC value | meaning |
 |---|---|---|---|
@@ -81,7 +81,7 @@ It is the only one of the four LUTs that is charge-asymmetric
 That table is a parametrisation of standalone studies — **not** something
 EICrecon computes from `DIRCBarHits`. If you need hpDIRC pattern recognition,
 it lives outside this repository. Full detail on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 ## What is persisted, and who consumes it
 

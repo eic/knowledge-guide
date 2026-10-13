@@ -108,12 +108,12 @@ simple weighted average. More sophisticated algorithm TBD."*
 This stage emits `edm4eic::Measurement2D` directly, which is why the TOF
 layers **skip** `TrackerMeasurementFromHits` and enter track finding one step
 later than the silicon and MPGD layers — see
-[Tracking → Stage 3]({% link docs/eicrecon/tracking.md %}).
+[Tracking → Stage 3]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Stage 4 — The waveform branch
 
 Shared machinery with the other pulse-based chains; see the
-[Pulse chain page]({% link docs/eicrecon/algorithms/pulse-chain.md %}).
+[Pulse chain page]({{ site.baseurl }}{% link docs/eicrecon/algorithms/pulse-chain.md %}).
 The gain is *derived*, not typed in
 ([`BTOF.cc#L88-L99`](https://github.com/eic/EICrecon/blob/main/src/detectors/BTOF/BTOF.cc#L88-L99)):
 
@@ -141,7 +141,7 @@ still TBD"*
 {: .note }
 `adc_range` differs between the two ROC digitizers: `CFDROCDigitization`
 (barrel) uses `2⁸ × 10 = 2560`, while `EICROCDigitization`
-([endcap]({% link docs/eicrecon/detectors/ectof.md %})) uses
+([endcap]({{ site.baseurl }}{% link docs/eicrecon/detectors/ectof.md %})) uses
 `2⁸ = 256`. The pulse gain in both plugins, however, is computed from a
 hard-coded `adc_range = 256`.
 
@@ -160,10 +160,10 @@ Persisted by default ([`JEventProcessorPODIO.cc#L104-L128`](https://github.com/e
 Downstream: `TOFBarrelClusterHits` is concatenated with
 `CentralWithoutTOFTrackerMeasurements` and `TOFEndcapClusterHits` into
 **`CentralTrackerMeasurements`**, the input to the CKF — see
-[Tracking]({% link docs/eicrecon/tracking.md %}). TOF *PID*
+[Tracking]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}). TOF *PID*
 does not come from this plugin at all: it comes from the `calibrations/tof.lut`
 table keyed on `BarrelTOF_ID` — see
-[Particle identification]({% link docs/eicrecon/pid.md %}).
+[Particle identification]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 ## Caveats / needs human verification
 

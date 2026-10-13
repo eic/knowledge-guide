@@ -65,7 +65,7 @@ shape reconstruction and its output collection carries the final name.
 ## Stage 1 — Digitization with a SiPM response model
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 Unlike BEMC, EEMC selects `readoutType="sipm"`, which replaces the linear
 ADC conversion by an explicit photon-counting model
 ([source](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc#L246-L260)):

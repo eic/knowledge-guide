@@ -60,7 +60,7 @@ rec hits — unlike BHCAL, where both consume rec hits.
 ## Stage 1 — Digitization
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 EHCAL leaves `readoutType` at its default `"simple"`, so the ADC is the plain
 linear conversion `ADC = ped + edep × corrMeanScale / dyRangeADC × capADC`.
 
@@ -125,7 +125,7 @@ warning and returns without configuring the maps
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — one proto-cluster per contributing MC primary, hits
 shared rather than partitioned. Described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 Input here is `HcalEndcapNMergedHits` together with the **raw**-hit links.
 
 ## Stage 5 — Island proto-clustering
@@ -168,7 +168,7 @@ would be unavailable.
 
 **Algorithm:** [`TrackClusterMergeSplitter`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/TrackClusterMergeSplitter.cc)
 — procedure described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 | parameter | struct default | EHCAL value | meaning |
 |---|---|---|---|

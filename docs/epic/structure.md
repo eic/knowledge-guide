@@ -143,7 +143,7 @@ Note that the barrel ECal is **two `<detector>` elements** in one file — the
 imaging (AstroPix) section
 ([`type="epic_EcalBarrelImaging"`](https://github.com/eic/epic/blob/main/compact/ecal/bic/bic.xml#L142-L149))
 and the ScFi section above — which is exactly why EICrecon's
-[BEMC page]({% link docs/eicrecon/detectors/bemc.md %}) has two independent
+[BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}) has two independent
 reconstruction branches that are merged at the end.
 
 Not every plugin is a detector. [`FileLoader.cpp`](https://github.com/eic/epic/blob/main/src/FileLoader.cpp#L67)
@@ -235,7 +235,7 @@ The practical consequences:
 - The reverse dependency is real too: EICrecon parameter tables reference field
   names (`fiber`, `z`, `layer`, `grid`) that only exist because a `<readout>`
   block in `eic/epic` declares them. See
-  [Readouts and segmentation]({% link docs/epic/readouts.md %}).
+  [Readouts and segmentation]({{ site.baseurl }}{% link docs/epic/readouts.md %}).
 
 ## Downloaded blobs: fieldmaps and calibrations
 

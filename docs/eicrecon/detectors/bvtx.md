@@ -18,7 +18,7 @@ AI-generated draft derived from EICrecon source at commit
 Every claim links to the exact file — verify there before depending on it.
 
 The vertex barrel plugin is the **structural twin of
-[BTRK]({% link docs/eicrecon/detectors/btrk.md %})**: same
+[BTRK]({{ site.baseurl }}{% link docs/eicrecon/detectors/btrk.md %})**: same
 four factories, same algorithms, same constants, different collection names.
 51 lines, registered in
 [`src/detectors/BVTX/BVTX.cc`](https://github.com/eic/EICrecon/blob/main/src/detectors/BVTX/BVTX.cc).
@@ -57,8 +57,8 @@ Everything is registered in
 | hit reco | [`TrackerHitReconstruction`](https://github.com/eic/EICrecon/blob/main/src/algorithms/tracking/TrackerHitReconstruction.cc) | `timeResolution` | `10` (ns) | default |
 
 Both algorithms are described in full on the
-[Tracking page]({% link docs/eicrecon/tracking.md %}) and on
-the [BTRK page]({% link docs/eicrecon/detectors/btrk.md %}).
+[Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}) and on
+the [BTRK page]({{ site.baseurl }}{% link docs/eicrecon/detectors/btrk.md %}).
 As with BTRK, **the noise parameters are not exposed as runtime flags** — the
 nine `BVTX:` flags cover only the digi and rec-hit factories.
 
@@ -73,7 +73,7 @@ Downstream: `SiBarrelVertexRecHits` joins **`CentralTrackingRecHits`**
 ([`tracking.cc#L71-L77`](https://github.com/eic/EICrecon/blob/main/src/global/tracking/tracking.cc#L71-L77)).
 Vertexing itself is a *global* stage that runs on fitted tracks, not on these
 hits — see
-[Tracking → Stage 9]({% link docs/eicrecon/tracking.md %}).
+[Tracking → Stage 9]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Caveats / needs human verification
 

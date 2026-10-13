@@ -74,7 +74,7 @@ The XML constant names use the **geometry** detector names
 ## Stage 1a — Pixel digitization (default path)
 
 **Algorithm:** [`SiliconTrackerDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/digi/SiliconTrackerDigi.cc)
-— see the [Tracking page]({% link docs/eicrecon/tracking.md %}).
+— see the [Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 All four detectors use the same two values:
 
 | parameter | struct default | MPGD value | meaning |
@@ -153,7 +153,7 @@ Downstream: all four `…RecHits` collections are among the seven merged into
 `OuterMPGDBarrel` additionally gets special treatment in
 `TrackerMeasurementFromHits`, where a `CartesianGridUV` segmentation causes
 the covariance to be rotated by the strip angle — see
-[Tracking → Stage 3]({% link docs/eicrecon/tracking.md %}).
+[Tracking → Stage 3]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Caveats / needs human verification
 

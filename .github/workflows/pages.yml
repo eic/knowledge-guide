@@ -45,7 +45,8 @@ jobs:
       - name: EIC smart search
         if: ${{ vars.EIC_SEARCH_URL != '' }}
         run: |
-          curl -sf -X POST -H "Authorization: Bearer $TOKEN" -A knowledge-guide "$URL/admin/reindex"
+          curl -sf -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+            -A knowledge-guide -d '{"source_names":["eic_knowledge_guide"],"full_reindex":true}' "$URL/ingest/run"
         env:
           URL: ${{ vars.EIC_SEARCH_URL }}
           TOKEN: ${{ secrets.EIC_SEARCH_ADMIN_TOKEN }}

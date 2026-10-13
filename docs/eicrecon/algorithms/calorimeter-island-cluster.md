@@ -25,7 +25,7 @@ contiguous patch of cells, patches separated by empty cells belong to
 different particles, and a patch with more than one energy peak may be two
 overlapping showers that should be pulled apart. The algorithm makes no
 attempt to compute an energy or a position — that is
-[`CalorimeterClusterRecoCoG`](calorimeter-cluster-reco-cog.html)'s job. It
+[`CalorimeterClusterRecoCoG`](calorimeter-cluster-reco-cog.md)'s job. It
 only decides *which hits belong together*, and, when splitting is enabled,
 *with what fractional weight*.
 
@@ -335,7 +335,7 @@ src/detectors/`). "TEP" = transverse energy profile.
 | [EHCAL](https://github.com/eic/EICrecon/blob/main/src/detectors/EHCAL/EHCAL.cc#L82-L104) | `HcalEndcapNIslandProtoClusters` | `HcalEndcapNMergedHits` | `localDistXY = {15 cm, 15 cm}` | **yes** | 0 / 30 MeV | 5 cm | `globalDistEtaPhi`, 1 |
 | [FHCAL](https://github.com/eic/EICrecon/blob/main/src/detectors/FHCAL/FHCAL.cc#L240-L261) | `LFHCALIslandProtoClusters` | `LFHCALRecHits` | matrix: 3-D tower face-adjacency **or** 2-D corner touch | no | 1 / 100 MeV | 0 | `globalDistEtaPhi`, 1 |
 | [ZDC](https://github.com/eic/EICrecon/blob/main/src/detectors/ZDC/ZDC.cc#L69-L91) | `EcalFarForwardZDCIslandProtoClusters` | `EcalFarForwardZDCRecHits` | `localDistXY = {50 cm, 50 cm}` | **yes** | 0.1 / 3 MeV | 5 cm | `globalDistEtaPhi`, 1 |
-| [ZDC](https://github.com/eic/EICrecon/blob/main/src/detectors/ZDC/ZDC.cc#L208-L228) | `HcalFarForwardZDCIslandProtoClusters` | `HcalFarForwardZDCSubcellHits` ([HEXPLIT](hexplit.html)) | `localDistXY = {"0.55 * HcalFarForwardZDC_SiPMonTile_SquareSideLength", ×2}` | no | 100 keV / 1 MeV | 1.5 cm | — |
+| [ZDC](https://github.com/eic/EICrecon/blob/main/src/detectors/ZDC/ZDC.cc#L208-L228) | `HcalFarForwardZDCIslandProtoClusters` | `HcalFarForwardZDCSubcellHits` ([HEXPLIT](hexplit.md)) | `localDistXY = {"0.55 * HcalFarForwardZDC_SiPMonTile_SquareSideLength", ×2}` | no | 100 keV / 1 MeV | 1.5 cm | — |
 | [ZDC](https://github.com/eic/EICrecon/blob/main/src/detectors/ZDC/ZDC.cc#L267-L287) | `HcalFarForwardZDCIslandProtoClustersBaseline` | `HcalFarForwardZDCRecHits` | `localDistXY = {50 cm, 50 cm}` | **yes** | 0.1 / 3 MeV | 5 cm | `globalDistEtaPhi`, 1 |
 | [LUMISPECCAL](https://github.com/eic/EICrecon/blob/main/src/detectors/LUMISPECCAL/LUMISPECCAL.cc#L63-L87) | `EcalLumiSpecIslandProtoClusters` | `EcalLumiSpecRecHits` | matrix on `sector` + decoded `module` | **yes** | 1 / 30 MeV | 0 | `localDistXY`, 10 mm |
 

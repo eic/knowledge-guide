@@ -19,7 +19,7 @@ Every claim links to the exact file — verify there before depending on it.
 
 The off-momentum detector catches charged fragments whose rigidity puts them
 outside the Roman-pot acceptance. Its plugin is a stripped-down
-[RPOTS]({% link docs/eicrecon/detectors/rpots.md %}): the
+[RPOTS]({{ site.baseurl }}{% link docs/eicrecon/detectors/rpots.md %}): the
 same three-stage structure, but with a **single** transfer matrix and no
 polynomial variant. 76 lines, registered in
 [`src/detectors/FOFFMTRK/FOFFMTRK.cc`](https://github.com/eic/EICrecon/blob/main/src/detectors/FOFFMTRK/FOFFMTRK.cc).
@@ -45,7 +45,7 @@ The runtime flag prefix is `FOFFMTRK:` (23 flags in the
 
 ([`FOFFMTRK.cc#L24-L39`](https://github.com/eic/EICrecon/blob/main/src/detectors/FOFFMTRK/FOFFMTRK.cc#L24-L39))
 Identical to the Roman pots and B0. Both algorithms are described on the
-[Tracking page]({% link docs/eicrecon/tracking.md %}).
+[Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Stage 2 — MatrixTransferStatic
 
@@ -118,7 +118,7 @@ not enter central tracking or the combined `ReconstructedParticles`.
    the stale prose block in
    [`definitions.xml`](https://github.com/eic/epic/blob/main/compact/definitions.xml)
    still describes as the ZDC ECal and HCal IDs. Trust the constants — see
-   [Detector naming & aliases]({% link docs/eicrecon/naming.md %}).
+   [Detector naming & aliases]({{ site.baseurl }}{% link docs/eicrecon/naming.md %}).
 
 ---
 

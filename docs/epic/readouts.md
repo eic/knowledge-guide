@@ -84,7 +84,7 @@ virtual 1 cm binning laid over the continuous fibre length.
 {: .note }
 This is exactly why EICrecon's BEMC configuration keeps referring to
 `{"fiber", "z"}`. In
-[`SimCalorimeterHitProcessor`]({% link docs/eicrecon/detectors/bemc.md %})
+[`SimCalorimeterHitProcessor`]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %})
 `hitMergeFields = {"fiber","z"}` merges the z-segments back together after
 attenuation, `contributionMergeFields = {"fiber"}` merges per-fibre, and in
 `CalorimeterHitReco` `maskPosFields = {"fiber","z"}` with `maskPos = "xy"`
@@ -208,7 +208,7 @@ at compile time. Geometry and reconstruction versions must be kept in step.
 
 ### The `bic_edepToNpe_layer.lut` question — resolved
 
-EICrecon's [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}) notes that
+EICrecon's [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}) notes that
 `EdepToNpeConversion` is configured with
 `edep_to_npe_filename = "calibrations/bic_edepToNpe_layer.lut"`, that the
 algorithm throws if it cannot open the file
@@ -263,7 +263,7 @@ each has a matching `epic_FileLoader` entry in `compact/calibrations.xml`:
 | [`PolynomialMatrixReconstruction.cc`](https://github.com/eic/EICrecon/blob/main/src/algorithms/fardetectors/PolynomialMatrixReconstruction.cc) | `calibrations/RP_60_xL_100_beamEnergy_*.xL.lut` |
 
 Field maps use the same machinery via `url=`/`cache=` attributes — see
-[Repository structure]({% link docs/epic/structure.md %}#downloaded-blobs-fieldmaps-and-calibrations).
+[Repository structure]({{ site.baseurl }}{% link docs/epic/structure.md %}#downloaded-blobs-fieldmaps-and-calibrations).
 
 ### Sampling fractions — *not* resolved the same way
 

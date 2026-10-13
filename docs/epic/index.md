@@ -18,7 +18,7 @@ Every claim links to the exact file — verify there before depending on it.
 [`eic/epic`](https://github.com/eic/epic) is the **DD4hep** description of the
 ePIC detector. It is the single source of truth for geometry, materials,
 readout segmentation, and named geometry constants — consumed by DD4hep-based
-simulation (`ddsim`/`npsim`) *and* by [EICrecon]({% link docs/eicrecon/index.md %})
+simulation (`ddsim`/`npsim`) *and* by [EICrecon]({{ site.baseurl }}{% link docs/eicrecon/index.md %})
 at reconstruction time, which loads the same compact description to decode
 cellIDs and look up constants.
 
@@ -40,7 +40,7 @@ declares `type="epic_CylinderSVTBarrel"`, which resolves to
 [`CurvedBarrelTracker_geo.cpp`](https://github.com/eic/epic/blob/main/src/CurvedBarrelTracker_geo.cpp#L397).
 The XML carries all the numbers; the C++ carries the construction logic and is
 reused across many detectors. See
-[Repository structure]({% link docs/epic/structure.md %}) for the full pattern.
+[Repository structure]({{ site.baseurl }}{% link docs/epic/structure.md %}) for the full pattern.
 
 ## Configurations are generated, not checked in
 
@@ -190,7 +190,7 @@ in the generated XML, so a compact file is only resolvable with the variable set
 | **all** resolved constants, numerically | the CI artifact dumps: [`epic_craterlake_constants.out`](https://eic.github.io/epic/artifacts/constants/epic_craterlake_constants.out) / [`.toml`](https://eic.github.io/epic/artifacts/constants/epic_craterlake_constants.toml) — expressions already evaluated |
 | a curated **parameter table** | [`epic_craterlake.html`](https://eic.github.io/epic/artifacts/DetectorParameterTable/epic_craterlake.html) / [`.csv`](https://eic.github.io/epic/artifacts/DetectorParameterTable/epic_craterlake.csv), generated from [`templates/DetectorParameterTable.csv.jinja2`](https://github.com/eic/epic/blob/main/templates/DetectorParameterTable.csv.jinja2) |
 | a **material** | [`compact/materials.xml`](https://github.com/eic/epic/blob/main/compact/materials.xml) and [`compact/optical_materials.xml`](https://github.com/eic/epic/blob/main/compact/optical_materials.xml) |
-| a **readout / cellID layout** | the `<readouts>` block at the bottom of the subsystem XML — see [Readouts and segmentation]({% link docs/epic/readouts.md %}) |
+| a **readout / cellID layout** | the `<readouts>` block at the bottom of the subsystem XML — see [Readouts and segmentation]({{ site.baseurl }}{% link docs/epic/readouts.md %}) |
 | **what the thing looks like** | the [geoviewer](https://eic.github.io/epic/geoviewer?nobrowser&file=artifacts/tgeo/epic_craterlake.root&item=default;1&opt=clipx;clipy;transp30;zoom120;ROTY320;ROTZ340;trz0;trr0;ctrl;all) and the view/STEP artifacts linked from the [README](https://github.com/eic/epic/blob/main/README.md) |
 | **how a volume is built** | the `src/*_geo.cpp` plugin named by the `<detector type="...">` attribute |
 
@@ -203,9 +203,9 @@ constants dump above.
 
 ## Pages in this section
 
-- **[Repository structure]({% link docs/epic/structure.md %})** — directory tour,
+- **[Repository structure]({{ site.baseurl }}{% link docs/epic/structure.md %})** — directory tour,
   the plugin pattern, where constants are declared and how EICrecon reads them.
-- **[Readouts and segmentation]({% link docs/epic/readouts.md %})** — cellID
+- **[Readouts and segmentation]({{ site.baseurl }}{% link docs/epic/readouts.md %})** — cellID
   bitfields, segmentation types, and where calibration files actually come from.
 
 ---

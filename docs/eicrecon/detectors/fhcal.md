@@ -72,7 +72,7 @@ There is **no** `TrackClusterMergeSplitter` for the insert.
 ## Stage 1 — Digitization (both detectors)
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 Both instances leave `readoutType` at the default `"simple"` (linear ADC).
 
 | parameter | Insert | LFHCAL | meaning |
@@ -111,7 +111,7 @@ applies a layer-dependent fraction here and uses `1.0` at cluster level.
 
 **Algorithm:** [`CalorimeterHitsMerger`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitsMerger.cc)
 — mechanics described on the
-[EHCAL page]({% link docs/eicrecon/detectors/ehcal.md %}).
+[EHCAL page]({{ site.baseurl }}{% link docs/eicrecon/detectors/ehcal.md %}).
 
 | parameter | Insert value | meaning |
 |---|---|---|
@@ -231,7 +231,7 @@ coordinate planes.
 
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 The insert instance runs on `HcalEndcapPInsertMergedHits`; the LFHCAL
 instance runs on `LFHCALRecHits`.
 
@@ -266,7 +266,7 @@ insert's truth shape instance (see caveat 4).
 
 **Algorithm:** [`TrackClusterMergeSplitter`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/TrackClusterMergeSplitter.cc)
 — procedure described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 | parameter | struct default | LFHCAL value | meaning |
 |---|---|---|---|

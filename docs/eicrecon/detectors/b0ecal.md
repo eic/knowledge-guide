@@ -53,7 +53,7 @@ in the reconstruction's view.
 ## Stage 1 — Digitization
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 `readoutType` is left at the default `"simple"`, so the ADC is the plain
 linear conversion `ADC = ped + edep × corrMeanScale / dyRangeADC × capADC`.
 
@@ -90,7 +90,7 @@ linear conversion `ADC = ped + edep × corrMeanScale / dyRangeADC × capADC`.
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — one proto-cluster per contributing MC primary, hits
 shared rather than partitioned. Described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 ## Stage 4 — Island proto-clustering
 

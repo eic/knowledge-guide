@@ -52,10 +52,10 @@ record to pick the right matrix (see caveats).
 
 ([`RPOTS.cc#L29-L43`](https://github.com/eic/EICrecon/blob/main/src/detectors/RPOTS/RPOTS.cc#L29-L43))
 Identical to
-[B0TRK]({% link docs/eicrecon/detectors/b0trk.md %}) and
-[FOFFMTRK]({% link docs/eicrecon/detectors/foffmtrk.md %}).
+[B0TRK]({{ site.baseurl }}{% link docs/eicrecon/detectors/b0trk.md %}) and
+[FOFFMTRK]({{ site.baseurl }}{% link docs/eicrecon/detectors/foffmtrk.md %}).
 Both algorithms are described on the
-[Tracking page]({% link docs/eicrecon/tracking.md %}).
+[Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Stage 2 — MatrixTransferStatic
 

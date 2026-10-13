@@ -18,5 +18,5 @@ depending on it. Corrections welcome via issues/PRs.
 
 ## Sections
 
-- **[EICrecon]({% link docs/eicrecon/index.md %})** — reconstruction chains, algorithms, parameters per detector
-- **[ePIC geometry]({% link docs/epic/index.md %})** — the DD4hep detector description: compact XML, detector plugins, configurations, readouts and cellIDs
+- **[EICrecon]({{ site.baseurl }}{% link docs/eicrecon/index.md %})** — reconstruction chains, algorithms, parameters per detector
+- **[ePIC geometry]({{ site.baseurl }}{% link docs/epic/index.md %})** — the DD4hep detector description: compact XML, detector plugins, configurations, readouts and cellIDs

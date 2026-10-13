@@ -27,7 +27,7 @@ The runtime flag prefix is `BTRK:` (9 flags in the
 fewest of any detector plugin except `BVTX`, `ECTRK` and `B0TRK`).
 
 All the interesting physics happens downstream, in
-[Tracking]({% link docs/eicrecon/tracking.md %}); this page
+[Tracking]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}); this page
 only documents the plugin's own wiring and constants.
 
 ## Chain overview
@@ -50,7 +50,7 @@ Note that hit reconstruction reads the **noise-merged** collection, not
 
 **Algorithm:** [`SiliconTrackerDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/digi/SiliconTrackerDigi.cc)
 — applies an energy-deposit threshold and quantises the hit time; described on
-the [Tracking page]({% link docs/eicrecon/tracking.md %}).
+the [Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 | parameter | struct default | BTRK value | meaning |
 |---|---|---|---|
@@ -95,7 +95,7 @@ The noise hits carry no MC links, so `SiBarrelRawHitLinks` /
 **Algorithm:** [`TrackerHitReconstruction`](https://github.com/eic/EICrecon/blob/main/src/algorithms/tracking/TrackerHitReconstruction.cc)
 — cell ID → cell centre, with a purely geometric `(cell_size/√12)²` covariance.
 Fully described on the
-[Tracking page]({% link docs/eicrecon/tracking.md %}).
+[Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 BTRK passes an **empty config**, so `timeResolution` stays at its default
 `10` ns
 ([`BTRK.cc#L48-L51`](https://github.com/eic/EICrecon/blob/main/src/detectors/BTRK/BTRK.cc#L48-L51)).
@@ -111,7 +111,7 @@ Downstream: `SiBarrelTrackerRecHits` is one of the seven collections merged
 into **`CentralTrackingRecHits`**
 ([`tracking.cc#L71-L77`](https://github.com/eic/EICrecon/blob/main/src/global/tracking/tracking.cc#L71-L77)),
 which feeds both seeding and measurement building. See
-[Tracking]({% link docs/eicrecon/tracking.md %}).
+[Tracking]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Caveats / needs human verification
 

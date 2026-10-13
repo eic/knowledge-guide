@@ -18,7 +18,7 @@ AI-generated draft derived from EICrecon source at commit
 Every claim links to the exact file — verify there before depending on it.
 
 The B0 tracker sits inside the B0pf dipole in the far-forward region, next to
-the [B0 ECal]({% link docs/eicrecon/detectors/b0ecal.md %}).
+the [B0 ECal]({{ site.baseurl }}{% link docs/eicrecon/detectors/b0ecal.md %}).
 Its plugin is 40 lines and registers **two factories** — digitization and hit
 reconstruction — with no noise stage
 ([`src/detectors/B0TRK/B0TRK.cc`](https://github.com/eic/EICrecon/blob/main/src/detectors/B0TRK/B0TRK.cc)).
@@ -29,7 +29,7 @@ What makes B0 unusual is what happens **after** the plugin: unlike the other
 far-forward detectors, B0 hits are fed to a full ACTS combinatorial Kalman
 filter — a complete second tracking chain running in parallel with the central
 one — rather than to a transfer-matrix reconstruction. See
-[Tracking]({% link docs/eicrecon/tracking.md %}).
+[Tracking]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## Chain overview
 
@@ -54,14 +54,14 @@ one — rather than to a transfer-matrix reconstruction. See
 
 The `10 keV` threshold is ~20× the central silicon trackers' `0.54 keV`, and
 is shared with the two other far-forward silicon detectors
-([RPOTS]({% link docs/eicrecon/detectors/rpots.md %}),
-[FOFFMTRK]({% link docs/eicrecon/detectors/foffmtrk.md %})),
+([RPOTS]({{ site.baseurl }}{% link docs/eicrecon/detectors/rpots.md %}),
+[FOFFMTRK]({{ site.baseurl }}{% link docs/eicrecon/detectors/foffmtrk.md %})),
 which suggests one far-forward assumption rather than a per-detector study.
 `timeResolution` still carries the config header's unresolved
 *"TODO 8 of what units??? Same TODO in juggler. Probably [ns]"*.
 
 Both algorithms are described in full on the
-[Tracking page]({% link docs/eicrecon/tracking.md %}).
+[Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 
 ## What is persisted, and who consumes it
 
@@ -78,7 +78,7 @@ Downstream:
 - `B0TrackerCKFTracks` is merged with `CentralCKFTracks` into `CombinedTracks`,
   and the ACTS containers of both go into the combined vertex finder
   (`CentralAndB0TrackVertices`) — see
-  [Tracking]({% link docs/eicrecon/tracking.md %}).
+  [Tracking]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 - Truth seeding routes MC particles below 50 mrad to `B0TrackerTruthSeeds` and
   the rest to `CentralTrackerTruthSeeds`.
 
@@ -91,7 +91,7 @@ Downstream:
 2. B0 is the one detector for which `TrackerMeasurementFromHits` relaxes its
    on-surface projection tolerance from 0.1 µm to 1 µm — an explicitly
    flagged hack in the source. See
-   [Tracking → Stage 3]({% link docs/eicrecon/tracking.md %}).
+   [Tracking → Stage 3]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}).
 3. The digi and rec `timeResolution` values agree here (`8`), unlike most
    other trackers — but the units of the digi value remain undefined in the
    source.

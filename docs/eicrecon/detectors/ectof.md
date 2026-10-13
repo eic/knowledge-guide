@@ -18,7 +18,7 @@ AI-generated draft derived from EICrecon source at commit
 Every claim links to the exact file — verify there before depending on it.
 
 The endcap TOF plugin is a near-copy of
-[BTOF]({% link docs/eicrecon/detectors/btof.md %}) with
+[BTOF]({{ site.baseurl }}{% link docs/eicrecon/detectors/btof.md %}) with
 **two deliberate differences**: it uses `EICROCDigitization` instead of
 `CFDROCDigitization`, and it has **no calibration stage** at all. Everything
 is registered in
@@ -87,7 +87,7 @@ The gain derivation is copied verbatim from the barrel
 ([`ECTOF.cc#L76-L83`](https://github.com/eic/EICrecon/blob/main/src/detectors/ECTOF/ECTOF.cc#L76-L83)):
 `sigma_analog = 0.293951 ns`, `Vm = 3e-4 GeV`, `adc_range = 256`, `offset = 3`
 → `gain ≈ -1.3885e6`. See the
-[Pulse chain page]({% link docs/eicrecon/algorithms/pulse-chain.md %})
+[Pulse chain page]({{ site.baseurl }}{% link docs/eicrecon/algorithms/pulse-chain.md %})
 for the algorithms themselves.
 
 | factory | algorithm | parameters |
@@ -117,10 +117,10 @@ Persisted by default ([`JEventProcessorPODIO.cc#L104-L128`](https://github.com/e
 
 Downstream: `TOFEndcapClusterHits` joins `TOFBarrelClusterHits` and
 `CentralWithoutTOFTrackerMeasurements` in **`CentralTrackerMeasurements`** —
-see [Tracking]({% link docs/eicrecon/tracking.md %}). PID
+see [Tracking]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}). PID
 comes from the shared `calibrations/tof.lut` table, keyed on `BarrelTOF_ID`
 even for the endcap — see
-[Particle identification]({% link docs/eicrecon/pid.md %}).
+[Particle identification]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 ## Caveats / needs human verification
 

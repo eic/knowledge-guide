@@ -31,7 +31,7 @@ The runtime flag prefix is `ECTRK:` (9 flags in the
 produce the single collection `SiEndcapTrackerRecHits`. There is no
 `SiEndcapTrackerPRecHits`/`…NRecHits` split anywhere in EICrecon; if you need
 the two sides apart you must decode the cellID or cut on z. See
-[Detector naming & aliases]({% link docs/eicrecon/naming.md %})
+[Detector naming & aliases]({{ site.baseurl }}{% link docs/eicrecon/naming.md %})
 for the EndcapP/EndcapN convention.
 
 ## Chain overview
@@ -62,9 +62,9 @@ Registered in
 | hit reco | [`TrackerHitReconstruction`](https://github.com/eic/EICrecon/blob/main/src/algorithms/tracking/TrackerHitReconstruction.cc) | `timeResolution` | `10` (ns) | default |
 
 Both algorithms are documented in full on the
-[Tracking page]({% link docs/eicrecon/tracking.md %}); the
+[Tracking page]({{ site.baseurl }}{% link docs/eicrecon/tracking.md %}); the
 noise stage is described on the
-[BTRK page]({% link docs/eicrecon/detectors/btrk.md %}).
+[BTRK page]({{ site.baseurl }}{% link docs/eicrecon/detectors/btrk.md %}).
 The noise parameters are **not** runtime flags.
 
 ## What is persisted, and who consumes it

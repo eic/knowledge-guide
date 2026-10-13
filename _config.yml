@@ -21,6 +21,9 @@ callouts:
   note:
     title: Note
     color: blue
+  important:
+    title: Important
+    color: red
 
 exclude:
   - README.md

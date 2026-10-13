@@ -12,7 +12,7 @@ under [`src/detectors/`](https://github.com/eic/EICrecon/tree/main/src/detectors
 are covered.
 
 **Start here if you are not sure what a detector is called.**
-[Detector naming & aliases]({% link docs/eicrecon/naming.md %})
+[Detector naming & aliases]({{ site.baseurl }}{% link docs/eicrecon/naming.md %})
 maps every subsystem's colloquial name (nHCal, LFHCAL, pfRICH, hpDIRC, Roman
 pots, OMD, CyMBaL, …) to its geometry/collection prefix, its EICrecon plugin
 and flag prefix, and its DD4hep system ID — and explains the EndcapP (+z,

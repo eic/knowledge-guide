@@ -90,11 +90,11 @@ Shared constants used by both branches
 ## Stage 1 — Digitization
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 Both FEMC variants use `readoutType="sipm"`, i.e. the binomial photon
 detection + pixel-saturation model
 ([source](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc#L246-L260)),
-described in more detail on the [EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+described in more detail on the [EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 | parameter | homogeneous (flag ≤ 1) | ScFi (flag == 2) | meaning |
 |---|---|---|---|
@@ -132,7 +132,7 @@ the shared constants above in both branches.
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — one proto-cluster per contributing MC primary, hits
 shared between proto-clusters. Described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 ## Stage 4 — Island proto-clustering
 
@@ -177,7 +177,7 @@ and only on the *truth* branch (see caveat 3).
 **Algorithm:** [`TrackClusterMergeSplitter`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/TrackClusterMergeSplitter.cc)
 — *"Merges or splits clusters based on tracks matched to them"*; the
 significance / merge-window procedure is described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 
 | parameter | struct default | FEMC value | meaning |
 |---|---|---|---|

@@ -73,12 +73,12 @@ the charge-shared or pulse-processed hits
 | `min_edep` | *(uninitialised)* | `0.1 keV` | minimum shared deposit |
 | `readout` | *(uninitialised)* | `"TaggerTrackerHits"` | segmentation source |
 
-Unlike the [TOF plugins]({% link docs/eicrecon/detectors/btof.md %}),
+Unlike the [TOF plugins]({{ site.baseurl }}{% link docs/eicrecon/detectors/btof.md %}),
 which use `rel` (fractions of a cell), LOWQ2 uses absolute micrometres
 ([`LOWQ2.cc#L51-L59`](https://github.com/eic/EICrecon/blob/main/src/detectors/LOWQ2/LOWQ2.cc#L51-L59)).
 
 The pulse stages are shared machinery — see the
-[Pulse chain page]({% link docs/eicrecon/algorithms/pulse-chain.md %}):
+[Pulse chain page]({{ site.baseurl }}{% link docs/eicrecon/algorithms/pulse-chain.md %}):
 
 | factory | algorithm | parameters |
 |---|---|---|
@@ -147,7 +147,7 @@ links and associations into `TaggerTrackerLocalTracks` and friends
 `optimum_theta = -M_PI + 0.026` is the clearest single line in EICrecon
 showing the far-backward convention: the struct default `0.026` points forward
 (+z, hadron side), and the taggers flip it to −z. Compare the
-[EndcapP/EndcapN convention]({% link docs/eicrecon/naming.md %}).
+[EndcapP/EndcapN convention]({{ site.baseurl }}{% link docs/eicrecon/naming.md %}).
 Neither `optimum_theta` nor `optimum_phi` nor `restrict_direction` is exposed
 as a runtime flag — only `chi2Max`, `layerHitsMax`, `layerWeights` and
 `numLayers` appear in the CI dump.
@@ -193,7 +193,7 @@ split collections, `TaggerTrackerRecHits`, and the three ML tensors.
 
 Downstream: `TaggerTrackerReconstructedParticles` is merged into the global
 reconstructed-particle flow — see
-[Particle identification]({% link docs/eicrecon/pid.md %}).
+[Particle identification]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 ## Caveats / needs human verification
 
@@ -208,7 +208,7 @@ reconstructed-particle flow — see
    `Low-Q2_Steering_Reconstruction.onnx` is presumably trained for that beam
    energy; nothing in EICrecon states its validity range, and the file is not
    in the repository (it is fetched at runtime — see
-   [Repository structure → downloaded blobs]({% link docs/epic/structure.md %})).
+   [Repository structure → downloaded blobs]({{ site.baseurl }}{% link docs/epic/structure.md %})).
 4. The 2 modules × 4 layers structure is hard-coded in the plugin, so a
    geometry with a different tagger layout silently produces empty or partial
    collections.
@@ -222,7 +222,7 @@ reconstructed-particle flow — see
    has a stale prose description (*"Low-Q2 Tagger 1 ID: 195, Tagger 2 ID:
    196"*) that contradicts the actual constants (`TaggerTracker_ID` 198,
    `TaggerCalorimeter_ID` 199). Trust the constants — see
-   [Detector naming & aliases]({% link docs/eicrecon/naming.md %}).
+   [Detector naming & aliases]({{ site.baseurl }}{% link docs/eicrecon/naming.md %}).
 
 ---
 

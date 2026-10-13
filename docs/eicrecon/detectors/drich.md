@@ -28,7 +28,7 @@ Everything is registered in
 The algorithms themselves — `PhotoMultiplierHitDigi`,
 `IrtCherenkovParticleID`, `MergeParticleID`, and how the results reach
 `ReconstructedParticle` — are documented in full on the
-[Particle identification page]({% link docs/eicrecon/pid.md %}).
+[Particle identification page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 This page covers the plugin's own wiring and constants.
 
 ## Chain overview
@@ -55,7 +55,7 @@ This page covers the plugin's own wiring and constants.
 
 **Algorithm:** [`PhotoMultiplierHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/digi/PhotoMultiplierHitDigi.cc)
 — explained on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 | parameter | struct default | dRICH value | meaning |
 |---|---|---|---|
@@ -110,7 +110,7 @@ The output is one `edm4eic::CherenkovParticleID` per (track, radiator) with a
 weight for each PDG code in `pdgList`. Because aerogel and gas cover different
 momentum ranges, the two are reconstructed separately and then merged by
 adding weights. Full treatment on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 | parameter | struct default | dRICH value | meaning |
 |---|---|---|---|
@@ -158,7 +158,7 @@ construction:
   (`calibrations/drich.lut.gz`, keyed on `ForwardRICH_ID`).
 
 Both are described on the
-[PID page]({% link docs/eicrecon/pid.md %}).
+[PID page]({{ site.baseurl }}{% link docs/eicrecon/pid.md %}).
 
 ## Caveats / needs human verification
 
@@ -187,7 +187,7 @@ Both are described on the
    unit conversion has been applied where the algorithm expects a bare
    number. Harmless today because `enableNoise = false`, but it would bite if
    noise were enabled. The same line appears in
-   [PFRICH]({% link docs/eicrecon/detectors/pfrich.md %}).
+   [PFRICH]({{ site.baseurl }}{% link docs/eicrecon/detectors/pfrich.md %}).
 3. `safetyFactor = 0.7` — a 30% blanket reduction of photoelectrons — has no
    provenance beyond the struct comment describing what a safety factor is.
 4. The five aerogel / ten gas tracking planes are magic numbers passed to

@@ -68,7 +68,7 @@ at zero degrees.
 ## Stage 1 — Digitization
 
 **Algorithm:** [`CalorimeterHitDigi`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterHitDigi.cc)
-— explained on the [BEMC page]({% link docs/eicrecon/detectors/bemc.md %}).
+— explained on the [BEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/bemc.md %}).
 Both instances leave `readoutType` at the default `"simple"`.
 
 | parameter | ECal (LYSO) | HCal (SiPM-on-tile) | meaning |
@@ -106,7 +106,7 @@ instead of a flat ADC value.
 — *"An algorithm for splitting calorimeter hits in overlapping cells into
 'subhits' based on the relative energies of hits on neighboring layers"*.
 The full procedure is described on the
-[FHCAL page]({% link docs/eicrecon/detectors/fhcal.md %}).
+[FHCAL page]({{ site.baseurl }}{% link docs/eicrecon/detectors/fhcal.md %}).
 The ZDC HCal is the only user of the **`S2` square 2-fold staggering
 pattern**: 4 sub-cells per cell, each weighted by a *single* neighbour energy
 (the H4 hexagonal pattern used by the FHCAL insert has 12 sub-cells weighted
@@ -160,7 +160,7 @@ plugin labels it *"Clusters with the baseline algorithm (no HEXPLIT)"*.
 
 **Algorithm:** [`CalorimeterTruthClustering`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/CalorimeterTruthClustering.cc)
 (no configuration) — described on the
-[EEMC page]({% link docs/eicrecon/detectors/eemc.md %}).
+[EEMC page]({{ site.baseurl }}{% link docs/eicrecon/detectors/eemc.md %}).
 Both sections run it on their **rec** hits.
 
 ## Stage 6 — Cluster reconstruction and shapes

@@ -56,7 +56,7 @@ Declared in
 | out `outputAssociations` | `edm4eic::MCRecoClusterParticleAssociation` | optional |
 
 By convention the output collection is named `…ClustersWithoutShapes`,
-because [`CalorimeterClusterShape`](calorimeter-cluster-shape.html) runs
+because [`CalorimeterClusterShape`](calorimeter-cluster-shape.md) runs
 immediately afterwards and re-emits the collection under its final name.
 
 ## The energy sum and the sampling-fraction correction

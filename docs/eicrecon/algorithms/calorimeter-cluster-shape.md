@@ -17,7 +17,7 @@ Every claim links to the exact file — verify there before depending on it.
 
 `CalorimeterClusterShape` is a decorator stage. It consumes clusters that
 already have an energy and a position — from
-[`CalorimeterClusterRecoCoG`](calorimeter-cluster-reco-cog.html),
+[`CalorimeterClusterRecoCoG`](calorimeter-cluster-reco-cog.md),
 [`ImagingClusterReco`](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/ImagingClusterReco.cc)
 or the two
 [cluster mergers](https://github.com/eic/EICrecon/blob/main/src/algorithms/calorimetry/EnergyPositionClusterMerger.cc)

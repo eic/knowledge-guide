@@ -38,7 +38,7 @@ scheduled refresh. Each call runs only when its repository variable is set:
 | variable | secret | calls |
 | --- | --- | --- |
 | `EIC_DOCS_MCP_URL` | `EIC_DOCS_REFRESH_TOKEN` | `POST <url>/refresh` on a hosted eic-docs-mcp |
-| `EIC_SEARCH_URL` | `EIC_SEARCH_ADMIN_TOKEN` | `POST <url>/admin/reindex` on the EIC smart-search service |
+| `EIC_SEARCH_URL` | `EIC_SEARCH_ADMIN_TOKEN` | `POST <url>/ingest/run` for source `eic_knowledge_guide` on the EIC smart-search service |
 
 ## Contributing
 
